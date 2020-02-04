@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   count = 1
-  numbers = [1]
+  log = []
 
   getColor() {
     return (this.count % 2) === 0 ? "red" : "green";
@@ -20,15 +20,8 @@ export class AppComponent {
 
   onButtonClick() {
     this.count = this.count + 1;
-    this.numbers.push(this.count)
+    //this.log.push(this.count)
+    this.log.push(new Date())
   }
-
-  getBackColor(number) {
-    return (number > 5) ? "blue" : "white";
-  }
-
-  getTextColor(number) {
-    return (number > 5) ? "white" : "blue";
-  }
-
 }
+
